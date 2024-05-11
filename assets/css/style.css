@@ -1,0 +1,261 @@
+* {
+  box-sizing: border-box;
+}
+html {
+  font-size: 62.5%;
+}
+body {
+  font-size: 1.6rem;
+  font-family: "Be Vietnam Pro", sans-serif;
+}
+/* ==================================common================================== */
+.container {
+  width: 1400px;
+  margin: 0 auto;
+  max-width: calc(100% - 48px);
+}
+a {
+  text-decoration: none;
+}
+.h1-content {
+  color: #171100;
+  font-size: 4.6rem;
+  font-weight: 750;
+  line-height: 1.17;
+  width: 700px;
+}
+.h2-content {
+  color: #171100;
+  font-size: 4.2rem;
+  font-weight: 700;
+  line-height: 1.17;
+  width: 600px;
+}
+.h3-content {
+  color: #171100;
+  font-size: 3rem;
+  font-weight: 500;
+  line-height: 1.17;
+}
+.h4-content {
+  color: #000;
+  font-size: 1.8rem;
+  margin-top: 10px;
+  font-weight: 600;
+}
+.p-content {
+  margin-top: 20px;
+  width: 470px;
+  color: #5f5b53;
+  font-weight: 400;
+  line-height: 1.67;
+}
+.btn {
+  display: block;
+  color: #fff;
+  text-align: center;
+  width: 108px;
+  border-radius: 24.5px;
+  background: #171100;
+  font-size: 1.4rem;
+  font-weight: 600;
+  line-height: 40px;
+  transition: all 0.3s ease;
+}
+.btn:hover {
+  opacity: 0.8;
+}
+
+/* =========================carousel============================= */
+/* phần .background color */
+.background_color {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+.background_color .background_item {
+  transition: 1s;
+  opacity: 0;
+  position: absolute;
+  background: radial-gradient(
+    circle at 50% 50%,
+    rgba(46, 46, 46, 1) 0%,
+    rgb(42, 41, 53) 0%,
+    rgba(0, 0, 0, 1) 100%
+  );
+  width: 100%;
+  height: 100%;
+}
+.background_color .background_item.bg2 {
+  background: radial-gradient(
+    circle at 50% 50%,
+    rgba(97, 150, 117, 1) 0%,
+    rgba(0, 0, 0, 1) 100%
+  );
+}
+.background_color .background_item.bg3 {
+  background: radial-gradient(
+    circle at 50% 38%,
+    rgba(46, 46, 46, 1) 0%,
+    rgba(123, 94, 112, 1) 0%,
+    rgba(120, 91, 107, 1) 0%,
+    rgba(0, 0, 0, 1) 100%
+  );
+}
+.background_color .background_item.bg4 {
+  background: radial-gradient(
+    circle at 50% 50%,
+    rgba(89, 123, 122, 1) 0%,
+    rgba(8, 13, 13, 1) 100%
+  );
+}
+.background_color .background_item.bg5 {
+  background: radial-gradient(
+    circle at 50% 50%,
+    rgba(85, 86, 57, 1) 0%,
+    rgba(10, 10, 5, 1) 100%
+  );
+}
+.background_color .background_item.active {
+  opacity: 1;
+}
+
+/* phần sản phẩm  */
+
+.slide_last_ip {
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+  height: 730px;
+}
+.list_ip .list_ip__item {
+  transition: 1s;
+  position: absolute;
+  top: 130px;
+  right: 0;
+  width: 190px;
+  height: auto;
+  opacity: 0.6;
+  filter: blur(8px);
+}
+.list_ip .list_ip__item img {
+  width: 100%;
+  height: auto;
+}
+.list_ip .list_ip__item:nth-child(1) {
+  transform: translate(100%, 70%);
+}
+.list_ip .list_ip__item:nth-child(2) {
+  transform: translate(-30%, 190%);
+}
+.list_ip .list_ip__item:nth-child(3) {
+  filter: blur(0);
+  opacity: 1;
+  width: 550px;
+  transform: translate(-45%, -12%);
+}
+.list_ip .list_ip__item:nth-child(4) {
+  transform: translate(-30%, -50%);
+}
+.list_ip .list_ip__item:nth-child(5) {
+  transform: translate(100%, 70%);
+}
+
+/* phần content  */
+/* logo  */
+
+.slide_last_ip .content_ip_banner {
+  position: absolute;
+  top: 22%;
+  left: 12%;
+  z-index: 1;
+}
+.content_ip_banner .big_logo_apple {
+  padding: 10px 0 50px 0;
+  display: flex;
+  align-items: flex-end;
+  gap: 15px;
+}
+.big_logo_apple img {
+  width: 60px;
+  height: auto;
+}
+.content_ip_banner .big_logo_apple span {
+  color: #dfdfdf;
+  font-size: 5.7rem;
+  text-shadow: 0 2px 1px #747474, -1px 3px 1px #767676, -2px 5px 1px #787878;
+}
+.content_ip_banner .h1-content {
+  color: #dfdfdf;
+}
+.content_ip_banner .p-content {
+  color: #dfdfdfb2;
+  margin-top: 15px;
+  padding: 0 0 20px;
+}
+.slide_last_ip .list_color_select {
+  padding: 20px 0;
+}
+.slide_last_ip .list_color_select ul {
+  display: flex;
+  gap: 30px;
+}
+.slide_last_ip .list_color_select ul li {
+  align-items: center;
+  gap: 8px;
+  display: flex;
+  padding: 10px 0;
+  color: #fff;
+  cursor: pointer;
+}
+.slide_last_ip .list_color_select ul li .dots {
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  background-color: #000;
+}
+/* màu từng dots  */
+.slide_last_ip .list_color_select .dots.cl2 {
+  background-color: rgba(199, 248, 199, 0.829);
+}
+.slide_last_ip .list_color_select .dots.cl3 {
+  background-color: rgba(244, 206, 213, 0.84);
+}
+.slide_last_ip .list_color_select .dots.cl4 {
+  background-color: rgb(183, 223, 248);
+}
+.slide_last_ip .list_color_select .dots.cl5 {
+  background-color: rgb(248, 248, 172);
+}
+
+/* test */
+#button__vector--left {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  left: 20px;
+  bottom: 50%;
+  background-color: #5f5c5781;
+  border: none;
+  width: 43px;
+  height: 43px;
+  border-radius: 50%;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+#button__vector--right {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  right: 10px;
+  bottom: 50%;
+  border: none;
+  border-radius: 50%;
+  width: 43px;
+  height: 43px;
+  transition: all 0.3s ease;
+  background-color: #5f5c5774;
+  cursor: pointer;
+}
