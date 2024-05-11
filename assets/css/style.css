@@ -188,29 +188,63 @@ a {
 .content_ip_banner .h1-content {
   color: #dfdfdf;
 }
+.content_ip_banner .color-content {
+  margin-left: 11.5%;
+  margin-top: 30px;
+  padding: 5px 0;
+  font-size: 2.3rem;
+  font-weight: 650;
+  color: #b2b1b1e3;
+}
 .content_ip_banner .p-content {
   color: #dfdfdfb2;
   margin-top: 15px;
   padding: 0 0 20px;
 }
+.box-full__content_vector {
+  position: relative;
+  width: 350px;
+  /* margin-left: 60px; */
+}
+.slide_last_ip .box_flex_color {
+  margin: 0 auto;
+  position: relative;
+  overflow: hidden;
+  width: 250px;
+  height: auto;
+  margin-left: 80px;
+}
 .slide_last_ip .list_color_select {
-  padding: 20px 0;
+  transform: translateX(0);
+  transition: 1s;
+  position: relative;
+  margin: 0 auto;
+  width: 250px;
 }
 .slide_last_ip .list_color_select ul {
   display: flex;
-  gap: 30px;
+  gap: 10px;
 }
 .slide_last_ip .list_color_select ul li {
-  align-items: center;
-  gap: 8px;
+  width: 250px;
+  align-items: end;
+  gap: 10px;
   display: flex;
   padding: 10px 0;
-  color: #fff;
+  border-radius: 1px;
   cursor: pointer;
 }
+.list_color_select .color_name {
+  width: 200px;
+  font-weight: 700;
+  text-shadow: rgb(183, 183, 183) 0.1em 0.1em 0.2em;
+  font-size: 2.8rem;
+  color: white;
+}
 .slide_last_ip .list_color_select ul li .dots {
-  width: 22px;
-  height: 22px;
+  border: 2px solid #dfdfdf;
+  width: 30px;
+  height: 30px;
   border-radius: 50%;
   background-color: #000;
 }
@@ -228,34 +262,27 @@ a {
   background-color: rgb(248, 248, 172);
 }
 
-/* test */
-#button__vector--left {
+/* nút chuyển màu */
+.box_flex_color .vector_btn_box {
   display: flex;
   align-items: center;
-  justify-content: center;
-  position: absolute;
-  left: 20px;
-  bottom: 50%;
-  background-color: #5f5c5781;
-  border: none;
-  width: 43px;
-  height: 43px;
-  border-radius: 50%;
-  transition: all 0.3s ease;
-  cursor: pointer;
+  bottom: 0;
+  left: 0;
+  z-index: 2;
 }
-#button__vector--right {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  position: absolute;
-  right: 10px;
-  bottom: 50%;
-  border: none;
-  border-radius: 50%;
-  width: 43px;
-  height: 43px;
-  transition: all 0.3s ease;
-  background-color: #5f5c5774;
+#left-btn img {
   cursor: pointer;
+  position: absolute;
+  width: 25px;
+  height: 25px;
+  left: 8px;
+  top: 12px;
+}
+#right-btn img {
+  cursor: pointer;
+  position: absolute;
+  width: 33px;
+  height: 33px;
+  left: 350px;
+  top: 12px;
 }
