@@ -67,6 +67,7 @@ a {
 }
 
 /* =========================carousel============================= */
+
 /* phần .background color */
 .background_color {
   position: relative;
@@ -123,9 +124,10 @@ a {
 /* phần sản phẩm  */
 
 .slide_last_ip {
+  margin: 0 auto;
   overflow: hidden;
   position: relative;
-  width: 100%;
+  width: 1519px;
   height: 730px;
 }
 .list_ip .list_ip__item {
