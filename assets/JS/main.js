@@ -31,7 +31,7 @@ function autoSlideBack() {
 
 // phần màu sắc
 const colorList = document.querySelectorAll(
-  ".slide_last_ip .list_color_select ul li"
+  ".slide_last_ip .list_color_select .item_color"
 );
 const boxColor = document.querySelector(".slide_last_ip .list_color_select");
 
@@ -44,22 +44,16 @@ const leftVector = document.getElementById("left-btn");
 const rightVector = document.getElementById("right-btn");
 
 rightVector.addEventListener("click", () => {
-  if (tgColor >= colorList.length - 1) {
-    tgColor = colorList.length - 1;
-  } else {
-    tgColor += 1;
-    let checkWidth = colorList[0].offsetWidth;
-    boxColor.style.transform = `translateX(${-(checkWidth + 10) * tgColor}px)`;
-    autoSlideNext();
-  }
+  const firstColor = document.querySelector(
+    ".slide_last_ip .list_color_select .item_color:first-child"
+  );
+  document.querySelector(".list_color_select").appendChild(firstColor);
+  autoSlideNext();
 });
 leftVector.addEventListener("click", () => {
-  if (tgColor == 0) {
-    tgColor = 0;
-  } else {
-    tgColor -= 1;
-    let checkWidth = colorList[0].offsetWidth;
-    boxColor.style.transform = `translateX(${-(checkWidth + 10) * tgColor}px)`;
-    autoSlideBack();
-  }
+  const lastColor = document.querySelector(
+    ".slide_last_ip .list_color_select .item_color:last-child"
+  );
+  document.querySelector(".list_color_select").prepend(lastColor);
+  autoSlideBack();
 });

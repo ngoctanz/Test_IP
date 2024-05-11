@@ -208,33 +208,37 @@ a {
   width: 350px;
   /* margin-left: 60px; */
 }
-.slide_last_ip .box_flex_color {
+
+.slide_last_ip .list_color_select {
   margin: 0 auto;
-  position: relative;
-  overflow: hidden;
-  width: 250px;
-  height: auto;
   margin-left: 80px;
+  overflow: hidden;
+  position: relative;
+  width: 250px;
+  height: 50px;
 }
 .slide_last_ip .list_color_select {
-  transform: translateX(0);
-  transition: 1s;
-  position: relative;
-  margin: 0 auto;
-  width: 250px;
-}
-.slide_last_ip .list_color_select ul {
   display: flex;
-  gap: 10px;
 }
-.slide_last_ip .list_color_select ul li {
+.slide_last_ip .list_color_select .item_color {
+  gap: 10px;
+  transition: 1s;
+  position: absolute;
   width: 250px;
   align-items: end;
-  gap: 10px;
   display: flex;
   padding: 10px 0;
   border-radius: 1px;
   cursor: pointer;
+}
+.slide_last_ip .list_color_select .item_color:nth-child(1) {
+  transform: translateX(-100%);
+}
+.slide_last_ip .list_color_select .item_color:nth-child(3) {
+  transform: translateX(100%);
+}
+.slide_last_ip .list_color_select .item_color:nth-child(n + 4) {
+  transform: translateX(200%);
 }
 .list_color_select .color_name {
   width: 200px;
@@ -243,7 +247,7 @@ a {
   font-size: 2.8rem;
   color: white;
 }
-.slide_last_ip .list_color_select ul li .dots {
+.slide_last_ip .list_color_select .item_color .dots {
   border: 2px solid #dfdfdf;
   width: 30px;
   height: 30px;
@@ -251,17 +255,17 @@ a {
   background-color: #000;
 }
 /* màu từng dots  */
-.slide_last_ip .list_color_select .dots.cl2 {
-  background-color: rgba(199, 248, 199, 0.829);
+.slide_last_ip .list_color_select .dots.cl1 {
+  background-color: rgb(248, 248, 172);
 }
 .slide_last_ip .list_color_select .dots.cl3 {
-  background-color: rgba(244, 206, 213, 0.84);
+  background-color: rgba(199, 248, 199, 0.829);
 }
 .slide_last_ip .list_color_select .dots.cl4 {
-  background-color: rgb(183, 223, 248);
+  background-color: rgba(244, 206, 213, 0.84);
 }
 .slide_last_ip .list_color_select .dots.cl5 {
-  background-color: rgb(248, 248, 172);
+  background-color: rgb(183, 223, 248);
 }
 
 /* nút chuyển màu */
